@@ -1,0 +1,4 @@
+interface:
+  display_name: "PRD"
+  short_description: "Product requirements: what a feature must do, and why"
+  default_prompt: "Use $prd to write a Product Requirements Document for a feature — problem, goals, non-goals, requirements, success metrics."

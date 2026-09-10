@@ -1,0 +1,25 @@
+{
+  "name": "harness-setup",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Bootstrap and reconcile AI coding-agent configuration (Codex, Claude Code) for any project.",
+  "license": "MIT",
+  "author": "ferronicardoso",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ferronicardoso/harness-setup.git"
+  },
+  "bin": {
+    "harness-setup": "bin/install.js",
+    "harness-setup-run": "engine/cli.js"
+  },
+  "scripts": {
+    "install-global": "node bin/install.js",
+    "install-global:link": "node bin/install.js --link",
+    "uninstall-global": "node bin/uninstall.js",
+    "test": "node tests/run.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

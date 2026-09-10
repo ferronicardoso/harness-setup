@@ -1,0 +1,4 @@
+interface:
+  display_name: "Brainstorm"
+  short_description: "Generate diverse ideas with rationale and next steps"
+  default_prompt: "Use $brainstorm to generate a diverse, well-reasoned set of ideas on a topic, each with a practical next step."

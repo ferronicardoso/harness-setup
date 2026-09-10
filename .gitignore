@@ -1,0 +1,17 @@
+# dependencies (none currently, kept for when/if any are added)
+node_modules/
+
+# logs
+npm-debug.log*
+*.log
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# editors
+.vscode/
+.idea/
+
+# packaging output
+*.tgz

@@ -1,0 +1,4 @@
+interface:
+  display_name: "ADR"
+  short_description: "Architecture decision records."
+  default_prompt: "Use $adr to document an architecture decision with clear context, decision, and consequences."

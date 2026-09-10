@@ -1,0 +1,4 @@
+interface:
+  display_name: "TRD"
+  short_description: "Technical requirements: how a feature will be built"
+  default_prompt: "Use $trd to write a Technical Requirements Document for a feature already scoped at the product level — architecture, interfaces, data model, risks."

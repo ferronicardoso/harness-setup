@@ -1,0 +1,4 @@
+interface:
+  display_name: "Harness Setup"
+  short_description: "Bootstrap/reconcile Codex + Claude Code config for this repo"
+  default_prompt: "Use $harness-setup to discover this project and reconcile its Codex/Claude Code agent configuration."
