@@ -24,6 +24,7 @@ const AGENT_CATALOG = [
   { id: 'dotnet-windows-architect', match: (d) => has(d, 'language', '.NET') && (has(d, 'desktop', 'WPF') || has(d, 'desktop', 'WinForms')) },
   { id: 'react-nextjs-frontend-expert', match: (d) => has(d, 'frontend', 'Next.js') || has(d, 'frontend', 'React') },
   { id: 'frontend-ui-ux-specialist', match: (d) => !!d.project.signals.frontend },
+  { id: 'seo-geo-content-strategist', match: (d) => !!d.project.signals.frontend },
   { id: 'flutter-mobile-architect', match: (d) => has(d, 'language', 'Flutter/Dart') || d.project.hasMobile },
   { id: 'postgresql-database-architect', match: (d) => has(d, 'database', 'PostgreSQL') },
   { id: 'mysql-mariadb-dba', match: (d) => has(d, 'database', 'MySQL') },
