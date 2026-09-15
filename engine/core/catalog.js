@@ -54,6 +54,7 @@ const SKILL_CATALOG = [
   { id: 'prd', description: 'Product Requirements Document — capture what a feature must do and why before building it.' },
   { id: 'trd', description: 'Technical Requirements Document — capture how a feature will be built: architecture, interfaces, constraints.' },
   { id: 'brainstorm', description: 'Structured ideation on a topic, with rationale and practical next steps per idea.' },
+  { id: 'bump-version', description: 'Bump the project version in the detected version file (package.json, pyproject.toml, Cargo.toml, .csproj/Directory.Build.props, VERSION.json), inferring patch/minor/major from Conventional Commits since the last tag.' },
 ];
 
 function listAgents(discovery, analysis) {

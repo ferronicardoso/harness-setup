@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bump Version"
+  short_description: "Bump the project's version file, patch/minor/major."
+  default_prompt: "Use $bump-version to bump the project's version, inferring the bump type from Conventional Commits since the last tag and confirming before writing."

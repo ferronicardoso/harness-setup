@@ -1,6 +1,6 @@
 {
   "name": "harness-setup",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "Bootstrap and reconcile AI coding-agent configuration (Codex, Claude Code) for any project.",
   "license": "MIT",

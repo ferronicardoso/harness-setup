@@ -7,6 +7,7 @@ const reconcileMod = require('./core/reconcile');
 const validateMod = require('./core/validate');
 const manifest = require('./core/manifest');
 const catalog = require('./core/catalog');
+const versionMod = require('./core/version');
 const claudeAdapter = require('./adapters/claude-code');
 const codexAdapter = require('./adapters/codex');
 
@@ -26,6 +27,7 @@ function parseArgs(argv) {
     else if (a === '--approve-all-pending') args.approveAllPending = true;
     else if (a === '--add-agent') String(argv[++i] || '').split(',').filter(Boolean).forEach((x) => args.addAgents.add(x));
     else if (a === '--add-skill') String(argv[++i] || '').split(',').filter(Boolean).forEach((x) => args.addSkills.add(x));
+    else if (a === '--bump') args.bumpType = argv[++i];
     else if (a === '--json') args.json = true;
   }
   return args;
@@ -36,6 +38,22 @@ function mark(cond) { return cond ? '✓' : '-'; }
 function main() {
   const args = parseArgs(process.argv.slice(2));
   const root = args.root;
+
+  // Standalone deterministic mode: no discovery/plan/reconcile, just find the
+  // version file and bump it (or report why it can't safely guess).
+  if (args.bumpType) {
+    const result = versionMod.bump(root, args.bumpType);
+    if (args.json) {
+      console.log(JSON.stringify(result, null, 2));
+    } else if (result.ok) {
+      console.log(`Bumped ${result.file}: ${result.from} -> ${result.to} (${result.type})`);
+    } else {
+      console.log(`Bump failed (${result.status}): ${result.message}`);
+      if (result.candidates) for (const c of result.candidates) console.log(`  - ${c.file} (${c.detectorId}): ${c.current}`);
+    }
+    process.exitCode = result.ok ? 0 : 1;
+    return;
+  }
 
   const env = discovery.detectEnv(root);
   const project = discovery.detectProject(root);
