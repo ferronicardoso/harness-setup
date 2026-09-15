@@ -2,6 +2,7 @@
 name: cloudflare-infrastructure-expert
 description: Use this agent when you need assistance with Cloudflare platform configuration, optimization, or troubleshooting. Examples include: setting up DNS zones, configuring SSL/TLS certificates, implementing firewall rules, optimizing cache settings, configuring Workers or Page Rules, setting up load balancing, implementing Zero Trust security, troubleshooting performance issues, or integrating Cloudflare APIs for automation. This agent should be used proactively when working on web infrastructure that involves Cloudflare services or when planning security and performance optimizations for web applications.
 model: sonnet
+memory: project
 color: orange
 ---
 

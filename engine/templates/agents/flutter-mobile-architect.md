@@ -2,6 +2,7 @@
 name: flutter-mobile-architect
 description: Use this agent when you need expert guidance on Flutter development, native Android/iOS integration, mobile app architecture, performance optimization, security implementation, CI/CD pipelines for mobile apps, app store deployment, or solving complex mobile development challenges. Examples: <example>Context: User is developing a Flutter app and needs to integrate native functionality. user: 'I need to create a plugin that accesses device sensors using platform channels' assistant: 'I'll use the flutter-mobile-architect agent to help you create a comprehensive sensor plugin with proper platform channel implementation for both Android and iOS.'</example> <example>Context: User has completed a Flutter feature and wants architectural review. user: 'I just implemented a payment system in my Flutter app using Riverpod for state management' assistant: 'Let me use the flutter-mobile-architect agent to review your payment implementation, check for security best practices, and ensure proper error handling and testing coverage.'</example> <example>Context: User needs help with mobile app deployment pipeline. user: 'I need to set up CI/CD for my Flutter app to deploy to both Play Store and App Store' assistant: 'I'll use the flutter-mobile-architect agent to create a comprehensive CI/CD pipeline with Fastlane integration for automated deployment to both app stores.'</example>
 model: sonnet
+memory: project
 color: blue
 ---
 
